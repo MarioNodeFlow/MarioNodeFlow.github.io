@@ -1,10 +1,18 @@
 ---
-title: "Hello world"
-date: 2025-07-03 00:00:00 +0800
-categories: [Hello world]
+title: "hey This is my first post"
+date: 2025-07-03 13:23:00 +0200
+categories: [Posts]
 tags: [Hello world]
 ---
 
-# Hello world Header
+# This is my title
 
-Hello world this is my wiki
+these are some test notes:
+
+#### Chemical Erosion
+Chemical erosion occurs when a rock’s chemical composition changes, such as when iron rusts or when limestone dissolves due to carbonation.
+
+#### Physical Erosion
+In physical erosion, the rock breaks down but its chemical composition remains the same, often causes rocks to get smaller or smoother. 
+
+Here is a paragraph with a <span class="prompt-tip">tip inside it</span> but not the whole paragraph.
