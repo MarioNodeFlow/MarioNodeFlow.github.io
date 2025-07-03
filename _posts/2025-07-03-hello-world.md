@@ -1,24 +1,15 @@
 ---
-title: "This is my first post"
-date: 2025-07-03 13:23:00 +0200
+title: "Copernicus"
+date: 2025-07-03 17:44:00 +0200
 categories: [Houdini]
-tags: [houdini, vfx, nodeflow]
+tags: [houdini, vfx, nodeflow, youtube, copernicus]
 ---
 
-# What is Houdini?
+### Getting Started with Copernicus in Houdini | SDF Shapes & Patterns
+<iframe width="809" height="455" src="https://www.youtube.com/embed/IEJwFPBJHlU?list=PLwwRnDH_Xdq29OpGlzaTaL5NTdLlW-ZVs" title="Getting Started with Copernicus in Houdini | SDF Shapes &amp; Patterns" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+### Master Distorsions & Polar UVs in Copernicus in Under 10 Mins!!
+<iframe width="809" height="455" src="https://www.youtube.com/embed/e2Vc9MFbvZw?list=PLwwRnDH_Xdq29OpGlzaTaL5NTdLlW-ZVs" title="Master Distorsions &amp; Polar UVs in Copernicus in Under 10 Mins!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-#### Chemical Erosion
-Chemical erosion occurs when a rock’s chemical composition changes, such as when iron rusts or when limestone dissolves due to carbonation.
-
-#### Physical Erosion
-In physical erosion, the rock breaks down but its chemical composition remains the same, often causes rocks to get smaller or <span style="color: MediumSlateBlue; font-weight:bold">smoother</span>.
-
-Adding images
-
-![Alt text](https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630)
-
-Adding videos
-
-<iframe width="800" height="450" src="https://www.youtube.com/embed/3PRzFfCIuqE" title="Create Cinematic Oceans FAST in Houdini | Realistic Shading &amp; Render with Karma XPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### Full PBR Material in Copernicus in Under 10 Minutes! | Complete Beginner Workflow
+<iframe width="809" height="455" src="https://www.youtube.com/embed/NuUqrMYu9uw?list=PLwwRnDH_Xdq29OpGlzaTaL5NTdLlW-ZVs" title="Full PBR Material in Copernicus in Under 10 Minutes! | Complete Beginner Workflow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
