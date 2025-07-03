@@ -13,8 +13,8 @@ I also founded NodeFlow, a Youtube channel supported by SideFX where I share edu
 
 In 2024 I was one of the few winners of the Rookies Context, my work has been featured by NVIDIA, and I had the chance to publish articles regarding my art in leading platforms like 3D World, Creative Bloq, The Rookies & Think Tank Training Center.
 
-Find my Personal work here: https://vimeo.com/865083222
-Check my Youtube channel: https://www.youtube.com/@nodeflowhoudini
+Find my Personal work here: [Nature](https://vimeo.com/865083222)
+Check my Youtube channel: [Nodeflow](https://www.youtube.com/@nodeflowhoudini)
 
 And Hey, if you read it until here, thank you so much, I am excited to work with you, either as Professor or as Houdini Generalist!
 

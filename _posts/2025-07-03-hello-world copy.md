@@ -5,10 +5,6 @@ categories: [Houdini]
 tags: [houdini, youtube, nodeflow, tutorials]
 ---
 
-
-
-## [Nodeflow](https://www.youtube.com/@nodeflowhoudini) is a YouTube channel focused on _Houdini!
-
 ## Mission
 
-NF is a passion-driven project dedicated to sharing clear, high-quality Houdini tutorials, tips, and workflows. NodeFlow goal is to deliver content that respects your time and helps you level up faster. New videos every week!
+[Nodeflow](https://www.youtube.com/@nodeflowhoudini) is a passion-driven project dedicated to sharing clear, high-quality Houdini tutorials, tips, and workflows. NodeFlow goal is to deliver content that respects your time and helps you level up faster. New videos every week!
