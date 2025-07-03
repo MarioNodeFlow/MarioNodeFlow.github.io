@@ -13,6 +13,4 @@ these are some test notes:
 Chemical erosion occurs when a rock’s chemical composition changes, such as when iron rusts or when limestone dissolves due to carbonation.
 
 #### Physical Erosion
-In physical erosion, the rock breaks down but its chemical composition remains the same, often causes rocks to get smaller or smoother. 
-
-Here is a paragraph with a <span class="prompt-tip">tip inside it</span> but not the whole paragraph.
+In physical erosion, the rock breaks down but its chemical composition remains the same, often causes rocks to get smaller or <span style="color: MediumSlateBlue; font-weight:bold">smoother</span>. 
