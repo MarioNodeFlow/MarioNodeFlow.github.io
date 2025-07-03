@@ -7,7 +7,7 @@ tags: [houdini, youtube, nodeflow, tutorials]
 
 
 
-## [Nodeflow](<🔗 [NodeFlow](https://www.youtube.com/@nodeflowhoudini)>) is a YouTube channel focused on _Houdini!
+
 
 ## Mission
 
