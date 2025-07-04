@@ -11,7 +11,7 @@
 - type: email
   icon: "fas fa-envelope"
   noblank: true
-  url: "mailto:marioleone777@gmail.com"
+  url: "https://mail.google.com/mail/?view=cm&to=marioleone777@gmail.com&su=Nodeflow%20Library"
 
 - #type: rss
   #icon: "fas fa-rss"
