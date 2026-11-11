@@ -111,21 +111,32 @@ ok "Team $TEAM_ID"
 
 # ---------------------------------------------------------------- Build
 step "Building LiDAR Scanner (the first build takes a minute or two)"
-set +e
-xcodebuild \
-  -project LidarScanner.xcodeproj \
-  -scheme LidarScanner \
-  -configuration Release \
-  -destination "id=$UDID" \
-  -derivedDataPath "$BUILD_DIR" \
-  -allowProvisioningUpdates \
-  -allowProvisioningDeviceRegistration \
-  DEVELOPMENT_TEAM="$TEAM_ID" \
-  CODE_SIGN_STYLE=Automatic \
-  PRODUCT_BUNDLE_IDENTIFIER="$BUNDLE_ID" \
-  build >"$LOG" 2>&1
-BUILD_STATUS=$?
-set -e
+run_build() {
+  set +e
+  xcodebuild \
+    -project LidarScanner.xcodeproj \
+    -scheme LidarScanner \
+    -configuration Release \
+    -destination "id=$UDID" \
+    -derivedDataPath "$BUILD_DIR" \
+    -allowProvisioningUpdates \
+    -allowProvisioningDeviceRegistration \
+    DEVELOPMENT_TEAM="$TEAM_ID" \
+    CODE_SIGN_STYLE=Automatic \
+    PRODUCT_BUNDLE_IDENTIFIER="$BUNDLE_ID" \
+    build >"$LOG" 2>&1
+  BUILD_STATUS=$?
+  set -e
+}
+
+run_build
+if [ $BUILD_STATUS -ne 0 ] && grep -q "is not installed. Please download and install the platform" "$LOG"; then
+  step "Downloading the iOS platform for Xcode (one time, several GB — this can take a while)"
+  xcodebuild -downloadPlatform iOS || fail "The iOS download failed. Open Xcode › Settings › Components,
+  click Get next to iOS, wait for it to finish, then run this again."
+  step "Building LiDAR Scanner"
+  run_build
+fi
 
 if [ $BUILD_STATUS -ne 0 ]; then
   ERRORS="$(grep -E "error:|BUILD FAILED" "$LOG" | sort -u | head -40)"
