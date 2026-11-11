@@ -22,7 +22,19 @@ A native iPhone/iPad app that scans the world with the LiDAR Scanner and saves a
 
 ## Install on your iPhone
 
-### Option A: with a Mac (easiest)
+### One command (Mac)
+
+Plug in your iPhone, then in Terminal:
+
+```bash
+bash ios/LidarScanner/install.sh
+```
+
+The script checks Xcode, finds your iPhone and your Apple ID team, then builds, installs and opens the app. If the build fails, it copies the errors to your clipboard. Run it again to update the app or renew the 7-day free signature.
+
+One-time setup: install Xcode, open it once, and add your Apple ID in *Xcode › Settings › Accounts*. On the iPhone, turn on *Settings › Privacy & Security › Developer Mode*. After the first install, trust the app in *Settings › General › VPN & Device Management*.
+
+### Option A: from Xcode
 
 1. Open `ios/LidarScanner/LidarScanner.xcodeproj` in Xcode.
 2. Select the **LidarScanner** target › *Signing & Capabilities* › choose your **Team** (a free Apple ID works). If Xcode complains about the bundle ID, change `com.marionodeflow.lidarscanner` to something unique.
