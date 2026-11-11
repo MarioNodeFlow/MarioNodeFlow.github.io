@@ -86,16 +86,26 @@ if [ -z "$TEAM_ID" ]; then
     | sed -n 's/.*OU *= *\([A-Z0-9]\{10\}\).*/\1/p' | head -1 || true)"
 fi
 if [ -z "$TEAM_ID" ]; then
-  for key in IDEProvisioningTeamByIdentifier IDEProvisioningTeams; do
-    TEAM_ID="$(defaults read com.apple.dt.Xcode "$key" 2>/dev/null \
-      | sed -n 's/.*teamID = "*\([A-Z0-9]\{10\}\)"*;.*/\1/p' | head -1 || true)"
+  # Teams Xcode knows about from signed-in accounts (key names vary by Xcode version).
+  TEAM_ID="$(defaults read com.apple.dt.Xcode 2>/dev/null \
+    | sed -n 's/.*[tT]eamI[Dd]" *= *"*\([A-Z0-9]\{10\}\)"*;.*/\1/p; s/.*teamID = "*\([A-Z0-9]\{10\}\)"*;.*/\1/p' \
+    | head -1 || true)"
+fi
+if [ -z "$TEAM_ID" ]; then
+  # Provisioning profiles left by earlier builds.
+  for profile in "$HOME/Library/Developer/Xcode/UserData/Provisioning Profiles"/*.mobileprovision \
+                 "$HOME/Library/MobileDevice/Provisioning Profiles"/*.mobileprovision; do
+    [ -f "$profile" ] || continue
+    TEAM_ID="$(security cms -D -i "$profile" 2>/dev/null | plutil -extract TeamIdentifier.0 raw -o - - 2>/dev/null || true)"
     [ -n "$TEAM_ID" ] && break
   done
 fi
 if [ -z "$TEAM_ID" ]; then
   open -a Xcode || true
-  fail "No Apple ID found in Xcode. In Xcode open Settings › Accounts, click +, sign in
-  with your Apple ID (a free one works), then run this again."
+  fail "Xcode doesn't have a signing certificate yet. In Xcode:
+  1. Settings › Accounts › + › Apple ID, and sign in (a free Apple ID works).
+  2. Select your Apple ID, click \"Manage Certificates…\", click + and choose \"Apple Development\".
+  Then run the same line again."
 fi
 ok "Team $TEAM_ID"
 
